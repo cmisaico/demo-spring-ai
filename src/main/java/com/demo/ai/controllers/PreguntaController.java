@@ -1,5 +1,6 @@
 package com.demo.ai.controllers;
 
+import com.demo.ai.models.GetCapitalRequest;
 import com.demo.ai.models.Pregunta;
 import com.demo.ai.models.Respuesta;
 import com.demo.ai.services.OpenAIService;
@@ -13,6 +14,11 @@ public class PreguntaController {
 
     public PreguntaController(OpenAIService openAIService) {
         this.openAIService = openAIService;
+    }
+
+    @PostMapping("/capital")
+    public Respuesta obtenerCapital(@RequestBody GetCapitalRequest getCapitalRequest) {
+        return this.openAIService.obtenerCapital(getCapitalRequest);
     }
 
     @PostMapping("/realizar")

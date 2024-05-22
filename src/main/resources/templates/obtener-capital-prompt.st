@@ -1,0 +1,1 @@
+Cual es la capital de {estadoOPais}? Responder en JSON con el nombre de la ciudad en una propiedad llamada 'respuesta'.
